@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Little Taco Shop</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="taco-512.webp" type="image/x-icon">
+</head>
+<body>
+    <div id="notification" style="display:none; position: fixed; top: 0; left: 0; right: 0; background-color: #4caf50; color: white; padding: 1rem; text-align: center; z-index: 1000;">
+        Thank you for contacting The Little Taco Shop! We have received your information.
+      </div>
+      
+
+  <!-- HERO PARALLAX SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to The Little Taco Shop</h1>
+      <p>Home of bold flavors and crunchy dreams 🌮</p>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#chef">Meet the Chef</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>The Little Taco Shop was founded in 2025 out of a passion for bold flavors and vibrant culture. We’re on a mission to serve up joy, one taco at a time.</p>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <ul>
+        <li>Crispy Tacos - KES 200</li>
+        <li>Soft Shell Tacos - KES 250</li>
+        <li>Guacamole & Chips - KES 150</li>
+        <li>Hibiscus Tea - KES 100</li>
+      </ul>
+    </section>
+
+    <!-- FEATURED DISHES -->
+    <section id="featured">
+      <h2>Featured Dishes</h2>
+      <article>
+        <h3>🔥 Volcano Taco</h3>
+        <p>Spicy beef, fiery salsa, and jalapeños that pack a punch.</p>
+      </article>
+      <article>
+        <h3>🌿 Veggie Lover</h3>
+        <p>A flavorful fusion of beans, roasted veggies, and fresh guac.</p>
+      </article>
+    </section>
+
+    <!-- MEET THE CHEF -->
+    <section id="chef">
+      <h2>Meet the Chef</h2>
+      <p>Chef Juan Carlos brings recipes passed down through generations with a modern twist. His passion? Making people smile through tacos.</p>
+    </section>
+
+    <!-- TACO FACTS -->
+    <section id="tacofacts">
+      <h2>Did You Know?</h2>
+      <ul>
+        <li>Tacos were first introduced in Kenya through Mexican TV shows in the '80s!</li>
+        <li>The word "taco" comes from Mexican silver miners in the 18th century.</li>
+      </ul>
+    </section>
+
+    <!-- TACO THEME SHOWCASE WITH SLIDER -->
+<section id="taco-showcase">
+    <h2>Our Taco Gallery</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="stock-photo-mexican-birria-tacos-quesabirria-with-lime-and-chili-sauce.webp" alt="Taco Image 1">
+        <img src="delicious-traditional-tacos-arrangement_23-2150799469.webp" alt="Taco Image 2">
+        <img src="serving-of-tacos-with-shredded-roast-pork-and-cheese-filling-on-brown-paper-in-wooden-plate.webp" alt="Taco Image 3">
+      </div>
+      <!-- Slider controls will go here -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+  
+
+    <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: hello@tthelittletacoshop.co.ke</p>
+        <p>Phone: +254 712 345678</p>
+      
+        <form id="contact-form">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+      
+          <label for="phone">Phone Number:</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{9,15}" placeholder="e.g. 0712345678" required><br><br>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Little Taco Shop</p>
+  </footer>
+  <!-- PARTNERS SECTION -->
+<section id="partners">
+    <h2>Our Partners</h2>
+    <div class="partner-logos">
+      <img src="partner1.png" alt="Partner 1">
+      <img src="partner2.png" alt="Partner 2">
+      <img src="partner3.png" alt="Partner 3">
+    </div>
+  </section>
+  
+  <!-- ADDITIONAL TESTIMONIALS -->
+  <section id="more-testimonials">
+    <h2>What More Taco Fans Say</h2>
+    <blockquote>"Insanely flavorful, I’m addicted!" — Kelvin M.</blockquote>
+    <blockquote>"A weekly lunch tradition!" — Brenda C.</blockquote>
+    <blockquote>"Perfectly spiced and worth every shilling." — Daniel K.</blockquote>
+  </section>
+  
+  <!-- SOCIAL MEDIA SECTION -->
+  <section id="social">
+    <h2>Follow Us</h2>
+    <div class="social-icons">
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="x.png" alt="X"></a>
+    </div>
+  </section>
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+  
+    function showSlide(index) {
+      if(index < 0) currentIndex = images.length - 1;
+      else if(index >= images.length) currentIndex = 0;
+      else currentIndex = index;
+  
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+    });
+  
+    // Optional: auto-slide every 5 seconds
+    setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+  </script>
+
+<script>
+    const form = document.getElementById('contact-form');
+    const notification = document.getElementById('notification');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission/refresh
+  
+      // Here you could add code to send the data via AJAX if you want
+  
+      // Show the notification
+      notification.style.display = 'block';
+  
+      // Clear the form fields
+      form.reset();
+  
+      // Hide the notification after 4 seconds
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 4000);
+    });
+  </script>
+  
+  
+
+</body>
+</html>

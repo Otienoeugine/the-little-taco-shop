@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jermaine">
+  <meta name="description" content="Store Hours For The Little Taco Shop">
+  <title>LTS Hours</title>
+  <link rel="icon" href="taco-512.webp" type="image/x-icon">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1>The Little Taco Shop Hours</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About <abbr title="The Little Taco Shop">LTS</abbr></a></li>
+        <li><a href="/#menu">Our Menu</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <figure>
+      <img src="stock-photo-mexican-birria-tacos-quesabirria-with-lime-and-chili-sauce.webp"
+           alt="Mexican birria Tacos"
+           title="We Love Mexican Tacos!" width="400" height="267">
+      <figcaption>Mexican birria</figcaption>
+    </figure>
+  </header>
+
+  <hr>
+
+  <main>
+    <section id="hours">
+      <p>We are open 7 days a week!</p>
+      <dl>
+        <dt>Sunday - Thursday</dt>
+        <dd>11am - 9pm</dd>
+        <dt>Friday - Saturday</dt>
+        <dd>11am - 11pm</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <!-- TACO FUN FACTS -->
+    <section id="fun-facts">
+      <h2>Did You Know?</h2>
+      <details>
+        <summary>Why are tacos perfect late-night food?</summary>
+        <p>Tacos are quick, customizable, and packed with flavor — perfect for midnight cravings after a long day or a party night out!</p>
+      </details>
+      <details>
+        <summary>What makes Birria tacos special?</summary>
+        <p>Birria tacos are made with stewed meat and served with a rich, flavorful dipping broth known as "consommé". A true Mexican delicacy!</p>
+      </details>
+    </section>
+
+    <hr>
+
+    <!-- MINI TESTIMONIAL -->
+    <section id="testimonials">
+      <h2>Late Night Taco Love</h2>
+      <blockquote>
+        “Every Friday night ends at LTS. Nothing beats birria tacos after a long week!” — Kevin M.
+      </blockquote>
+    </section>
+
+    <hr>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter">
+      <h2>Stay Up Late, Stay Informed 🌮</h2>
+      <form id="newsletter-form">
+        <label for="email">Subscribe for our weekend specials:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="notifier"></div>
+    </section>
+
+    <p><a href="#">Back To Top</a></p>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2025 The Little Taco Shop</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('header, main, section, footer, figure img').forEach(el => {
+      observer.observe(el);
+    });
+
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      document.getElementById('notifier').textContent = `Thanks for subscribing, ${email}! 🌮`;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
