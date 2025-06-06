@@ -1,4 +1,4 @@
-# 🌮 The Little Taco Shop – IYF Weekend Academy Project
+# 🌮 The Little Taco Shop 
 
 [![Live Website](https://img.shields.io/badge/Live-Demo-green?style=flat-square&logo=github)](https://otienoeugine.github.io/the-little-taco-shop/)
 [![Made with HTML & CSS](https://img.shields.io/badge/Built%20With-HTML%20%26%20CSS-blueviolet?style=flat-square)]()
