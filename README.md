@@ -5,7 +5,7 @@
 
 ## 📖 Project Description
 
-This is a single-page, responsive website created as part of the **IYF Weekend Academy**. It presents a fictional taco shop with vibrant visuals, interactive sections, and mobile-friendly design. Visitors can explore the menu, meet the chef, read testimonials, and submit their contact info.
+This is a single-page, responsive website created and  presents a fictional taco shop with vibrant visuals, interactive sections, and mobile-friendly design. Visitors can explore the menu, meet the chef, read testimonials, and submit their contact info.
 
 ## 🧰 Technologies Used
 
